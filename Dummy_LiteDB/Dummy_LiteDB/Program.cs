@@ -20,7 +20,7 @@ static void Get(ref LiteDatabase db, string nome)
     if (db.CollectionExists("Pessoa")) 
     {
         var foundOne = db.GetCollection<Pessoa>().FindOne(x => x.Nome == nome);
-        Console.WriteLine($" > GET, Id: {foundOne.Id} , Nome: {foundOne.Nome} , Idade: {foundOne.Idade}");
+        Console.WriteLine($" > GET, Id: {foundOne.Id} , Nome: {foundOne.Nome} , Idade: {foundOne.Idade} , DateTime: {foundOne.Fecha}");
     }
 }
 
@@ -31,7 +31,7 @@ static void UpdateIdade (ref LiteDatabase db, string nome, int idade)
         var foundOne = db.GetCollection<Pessoa>().FindOne(x => x.Nome == nome);
         foundOne.Idade = idade;
         db.GetCollection<Pessoa>().Update(foundOne);
-        Console.WriteLine($" > UPDATE, Id: {foundOne.Id} , Nome: {foundOne.Nome} , Idade: {foundOne.Idade}");
+        Console.WriteLine($" > UPDATE, Id: {foundOne.Id} , Nome: {foundOne.Nome} , Idade: {foundOne.Idade} , DateTime: {foundOne.Fecha}");
     }
 }
 
@@ -40,20 +40,26 @@ static void Delete(ref LiteDatabase db, string nome)
     if (db.CollectionExists("Pessoa"))
     {
         var foundOne = db.GetCollection<Pessoa>().FindOne(x => x.Nome == nome);
-        Console.WriteLine($" > DELETED, Id: {foundOne.Id} , Nome: {foundOne.Nome} , Idade: {foundOne.Idade}");
+        Console.WriteLine($" > DELETED, Id: {foundOne.Id} , Nome: {foundOne.Nome} , Idade: {foundOne.Idade} , DateTime: {foundOne.Fecha}");
         db.GetCollection<Pessoa>().Delete(foundOne.Id);
         // Deleted
     }
 }
 
 LiteDatabase db = CreateDB();
-//Add(ref db, "Luis Rojas", 34);
-///Add(ref db, "Jessy Morier", 32);
+Add(ref db, "Luis Rojas", 34);
+Add(ref db, "Jessy Morier", 32);
 Add(ref db, "Rufo", 10);
+
+Get(ref db, "Luis Rojas");
+Get(ref db, "Jessy Morier");
 Get(ref db, "Rufo");
-UpdateIdade(ref db, "Rufo", 32);
-Get(ref db, "Rufo");
-Delete(ref db, "Rufo");
+
+//UpdateIdade(ref db, "Rufo", 32);
+//Get(ref db, "Rufo");
+//Delete(ref db, "Rufo");
+//Delete(ref db, "Luis Rojas");
+//Delete(ref db, "Jessy Morier");
 
 
 
