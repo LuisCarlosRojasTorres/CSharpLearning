@@ -66,3 +66,41 @@ foreach (var p in customerFullNames)
 }
 */
 // GROUPING
+/*
+var customerByCompany = customers.GroupBy(x => x.Company);
+foreach (var customerPerCompany in customerByCompany)
+{
+    Console.WriteLine($" > {customerPerCompany.Key}: {customerPerCompany.Count()}");
+
+    foreach (var customer in customerPerCompany)
+    {
+        Console.WriteLine($"\t> {customer.FirstName} , {customer.LastName}");
+    }
+}
+*/
+// AGGREGATING
+/*
+int numberOfCompanies = customers.Select(x => x.Company).Count();
+Console.WriteLine($" > number of Companies: {numberOfCompanies}");
+int numberOfDistinctCompanies = customers.Select(x => x.Company).Distinct(). Count();
+Console.WriteLine($" > number of Distinct Companies: {numberOfDistinctCompanies}");
+*/
+// JOIN
+/*
+var customerAndCity = customers.Select(c => new { c.FirstName, c.LastName, c.Company })
+    .Join(
+            addresses,
+            cust => cust.Company,
+            addre => addre.Company,
+            (cust,addre) => new { cust.FirstName, cust.LastName, addre.City}
+        );
+foreach (var p in customerAndCity)
+{
+    Console.WriteLine($" > {p}");
+}
+*/
+
+int numberOfCompanies = (from c in customers
+                         select c.Company).Distinct().Count();
+Console.WriteLine($" > {numberOfCompanies}");
+
