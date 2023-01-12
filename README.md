@@ -4,7 +4,10 @@ Different Projects of topics which im learning
 ## Commit template
 ``` cs
 
-nameOfProject - <functionality Added>
+nameOfProject - <functionality Added> - <in Progress/Finished>
+
+Changelog:
+-
 
 List of changes:
 - Added <something e.g. ch01, fig, vid01, eq01> 
