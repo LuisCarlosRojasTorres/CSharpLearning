@@ -1,6 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
-
+using Dummy_NewtonJson;
 using Newtonsoft.Json;
+
 /*
  SEQUENCING:
 1. Load json into variables i.e., Dictionary<string,string>
@@ -19,6 +20,10 @@ using (StreamReader file = File.OpenText(Path.Combine("newDummyJson.json")))
 {
     newDefaultVariables = JsonConvert.DeserializeObject<Dictionary<string, string>>(file.ReadToEnd());
 }
+
+Lite.Add("var7", "456");
+Lite.Add("var8", "123");
+Lite.Add("var9", "222");
 
 Console.WriteLine("Hello, World!");
 Console.ReadKey();
