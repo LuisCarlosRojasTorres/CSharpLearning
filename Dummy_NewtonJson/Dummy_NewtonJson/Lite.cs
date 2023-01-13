@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using LiteDB;
+using Newtonsoft.Json.Linq;
 
 namespace Dummy_NewtonJson
 {
@@ -57,13 +58,27 @@ namespace Dummy_NewtonJson
             }
         }
 
+        public static void Delete(string key, string nameOfCollection = "rufo")
+        {
+            using (LiteDatabase db = new LiteDatabase("Lite.db"))
+            {
+                var foundValue = db.GetCollection(nameOfCollection).FindOne(x => x["_id"] == key);
+
+                if (foundValue != null)
+                {
+                    Console.WriteLine($" > DELETE: key = {foundValue["_id"]} , Value = {foundValue["Value"]}");
+                    db.GetCollection(nameOfCollection).Delete(foundValue["_id"]);
+                }                
+            }
+        }
+
         public static List<string> GetKeys(string nameOfCollection = "rufo")
         {
             using (LiteDatabase db = new LiteDatabase("Lite.db"))
             {
                 var listOfKeys = db.GetCollection("rufo").FindAll().Select(x => x["_id"].AsString).ToList();
                 return listOfKeys;
-            }
+            }            
         }
 
     }
