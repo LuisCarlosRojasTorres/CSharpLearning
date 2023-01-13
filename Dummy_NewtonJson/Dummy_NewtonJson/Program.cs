@@ -21,9 +21,8 @@ using (StreamReader file = File.OpenText(Path.Combine("newDummyJson.json")))
     newDefaultVariables = JsonConvert.DeserializeObject<Dictionary<string, string>>(file.ReadToEnd());
 }
 
-Lite.Add("var7", "456");
-Lite.Add("var8", "123");
-Lite.Add("var9", "222");
+Lite.Set(oldDefaultVariables);
+Lite.Set(newDefaultVariables);
 
 Console.WriteLine("Hello, World!");
 Console.ReadKey();
