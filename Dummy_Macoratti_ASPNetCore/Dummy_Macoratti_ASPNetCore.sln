@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dummy_Macoratti_ASPNetCore", "Dummy_Macoratti_ASPNetCore\Dummy_Macoratti_ASPNetCore.csproj", "{5261A62B-93CD-4FE6-ABF3-5EBCCF460CF1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5261A62B-93CD-4FE6-ABF3-5EBCCF460CF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5261A62B-93CD-4FE6-ABF3-5EBCCF460CF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5261A62B-93CD-4FE6-ABF3-5EBCCF460CF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5261A62B-93CD-4FE6-ABF3-5EBCCF460CF1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ADAAD944-441C-46F8-8D6A-100913006082}
+	EndGlobalSection
+EndGlobal
