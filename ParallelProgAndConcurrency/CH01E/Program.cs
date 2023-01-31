@@ -6,10 +6,10 @@ var pingThread = new Thread(networkingWork.CheckNetworkStatus);
 var ctSource = new CancellationTokenSource();
 pingThread.Start(ctSource.Token);
 
-for (int i = 0; i < 5; i++)
+for (int i = 0; i < 3; i++)
 {
     Console.WriteLine($"Loop: {i} Main thread working...");
-    Thread.Sleep(100);
+    Thread.Sleep(50);
 }
 Console.WriteLine($"Loop finished");
 ctSource.Cancel();
