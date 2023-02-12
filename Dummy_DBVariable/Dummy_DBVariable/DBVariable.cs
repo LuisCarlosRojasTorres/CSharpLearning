@@ -12,20 +12,20 @@ namespace Dummy_DBVariable
         public int Id { get; set; }
         public string Key { get; set; }
 
-        public string[]? Dates { get; set; }
-        public string[]? Values { get; set; }
-        public bool[]? Hidden { get; set; }
+        public List<string>? Dates { get; set; }
+        public List<string>? Values { get; set; }
+        public List<bool>? Hidden { get; set; }
 
         public DBVariable()
         {
             this.Key = "dummyKey";
 
-            this.Dates = new string[1] { DateTime.Now.ToString() };
-            this.Values = new string[1] { "dummyValue" };
-            this.Hidden = new bool[1] { false };
+            this.Dates = new List<string> { DateTime.Now.ToString() };
+            this.Values = new List<string> { "dummyValue" };
+            this.Hidden = new List<bool> { false };
         }
 
-        public DBVariable(string key, string[] dates, string[] values, bool[] hidden) 
+        public DBVariable(string key, List<string> dates, List<string> values, List<bool> hidden) 
         {
             this.Key = key;
 
@@ -38,39 +38,21 @@ namespace Dummy_DBVariable
         {
             this.Key = key;
 
-            Dates = new string[1] { DateTime.Now.ToString() };
-            
-            Values = new string[1] { value };
-            Hidden = new bool[1] { hidden };
+            this.Dates = new List<string> { DateTime.Now.ToString() };
+            this.Values = new List<string> { value };
+            this.Hidden = new List<bool> { hidden };
         }
 
         public void AddValue( string value, bool hidden = false)
-        {
-            int size = this.Dates.Length;
-
-            string now = DateTime.Now.ToString();
-
-            string[] dummyDates = new string[size+1];
-            string[] dummyValues = new string[size+1];
-            bool[] dummyHidden = new bool[size+1];
-
-            this.Dates.CopyTo(dummyDates, 0);
-            dummyDates[size - 1] = now;
-
-            this.Values.CopyTo(dummyValues, 0);            
-            dummyValues[size - 1] = value;
-
-            this.Hidden.CopyTo(dummyHidden, 0);            
-            dummyHidden[size - 1] = hidden;
-
-            this.Dates= dummyDates;
-            this.Values= dummyValues;
-            this.Hidden= dummyHidden;
+        {            
+            this.Dates.Add(DateTime.Now.ToString());
+            this.Values.Add(value);
+            this.Hidden.Add(hidden);            
         }
 
         public void SetAsHidden() 
         {
-            for(int i = 0; i < this.Hidden.Length; i++) 
+            for(int i = 0; i < this.Hidden.Count; i++) 
             {
                 this.Hidden[i] = true;
             }
@@ -80,7 +62,7 @@ namespace Dummy_DBVariable
         {
             string ans = "KEY: " + Key + "\n";
 
-            for (int i = 0; i < Dates.Length; i++) {
+            for (int i = 0; i < Dates.Count; i++) {
                 ans += " - " + Dates[i] + " , " + Values[i] + " , " + Hidden[i].ToString() + "\n"; 
             }
 
