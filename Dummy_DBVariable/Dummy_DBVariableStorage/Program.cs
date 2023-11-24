@@ -90,11 +90,12 @@ static string getLastValue(string key)
 
 Random rnd = new Random();
 int randomValue = 0;
+int numOfTotalData = 100; 
 //int numOfTotalData = 6000; // for 1 day
-int numOfTotalData = 180000; // for 1 month
+//int numOfTotalData = 180000; // for 1 month
 //int numOfTotalData = 2200000; // for 1 year
 //int numOfTotalData = 6600000; // for 3 year
-int numOfTypesOfRegisters = 500;
+int numOfTypesOfRegisters = 100;
 int numOfDataPerRegister = numOfTotalData / numOfTypesOfRegisters;
 
 Console.WriteLine($"Num Of Total data: {numOfTotalData}");
