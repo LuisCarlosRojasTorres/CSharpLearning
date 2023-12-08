@@ -24,7 +24,27 @@ static void Greetings(List<string> names, DummyDelegate dummyDelegate)
     }    
 }
 
-//Driver program
-var names = new List<string> { "Luis", "Jessyca", "Lobo", "Rufa"};
+//Use1: Delegates can be initialize like this:
+DummyDelegate dummyDelegate = new DummyDelegate(SayHello);
+dummyDelegate.Invoke("Rufo");
 
+//Use1: Delegates can be initialize like this:
+DummyDelegate dummyDelegate2 = SayBye;
+dummyDelegate2("Rufo");
+
+//Use2: Methods can take delegates as arguments.
+var names = new List<string> { "Luis", "Jessyca", "Lobo", "Rufa"};
 Greetings(names, SayHello);
+
+/*
+ Output:
+
+ - Hi Rufo
+ - Bye Rufo
+ - Hi Luis
+ - Hi Jessyca
+ - Hi Lobo
+ - Hi Rufa
+ */
+
+
