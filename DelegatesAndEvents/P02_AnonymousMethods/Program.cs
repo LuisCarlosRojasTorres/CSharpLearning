@@ -1,10 +1,15 @@
 ﻿namespace P02_AnonymousMethods
 {
-    internal class Program
+    delegate int DummyDelegate(int x);
+
+    class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            DummyDelegate dummyDelegate = delegate (int x) { return x * x; };
+
+            Console.WriteLine(dummyDelegate(5)); // 100
         }
     }
+
 }
