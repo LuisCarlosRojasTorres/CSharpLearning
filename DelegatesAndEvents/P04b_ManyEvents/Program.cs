@@ -3,7 +3,7 @@
     internal class Program
     {
         delegate void Dummy1EventHandler();
-        delegate void Dummy2EventHandler();
+        delegate int Dummy2EventHandler(int a, int b);
 
         class DummyPublisher
         {
@@ -21,13 +21,13 @@
                 }
             }
 
-            public void DummyMethod2()
+            public void DummyMethod2(int a, int b)
             {
                 Console.WriteLine(" - DummyPublisher: DummyMethod2");
 
                 if (dummy2EventHandler != null)
                 {
-                    dummy2EventHandler();
+                    dummy2EventHandler(a,b);
                 }
             }
         }
@@ -39,9 +39,13 @@
                 Console.WriteLine(" - DummySubscriber: SubscriberMethod1");
             }
 
-            public static void SubscriberMethod2()
+            public static int SubscriberMethod2(int a, int b)
             {
-                Console.WriteLine(" - DummySubscriber: SubscriberMethod2");
+                Console.WriteLine(" - DummySubscriber: SubscriberMethod2 with data");
+                Console.WriteLine($" - DummySubscriber: a = {a}");
+                Console.WriteLine($" - DummySubscriber: b = {b}");
+                Console.WriteLine($" - DummySubscriber: result = {a+b}");
+                return a + b;
             }
         }
 
@@ -53,7 +57,8 @@
             dummy.dummy2EventHandler += DummySubscriber.SubscriberMethod2;
             
             dummy.DummyMethod1();
-            dummy.DummyMethod2();
+            int var1 = 5, var2 = 7;
+            dummy.DummyMethod2(var1, var2);
         }
     }
 }
