@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P03_LambdaExpressions", "P0
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P04_Events", "P04_Events\P04_Events.csproj", "{0C7B911F-A688-491E-8EDC-8C427FF7720A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P04b_ManyEvents", "P04b_ManyEvents\P04b_ManyEvents.csproj", "{7A35112B-9681-4283-9A67-09B73B63A669}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P04b_ManyEvents", "P04b_ManyEvents\P04b_ManyEvents.csproj", "{7A35112B-9681-4283-9A67-09B73B63A669}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P05_MethodGroups", "P05_MethodGroups\P05_MethodGroups.csproj", "{4024B4D3-B71A-4094-A5E1-8EEF0B78C158}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{7A35112B-9681-4283-9A67-09B73B63A669}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7A35112B-9681-4283-9A67-09B73B63A669}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7A35112B-9681-4283-9A67-09B73B63A669}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4024B4D3-B71A-4094-A5E1-8EEF0B78C158}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4024B4D3-B71A-4094-A5E1-8EEF0B78C158}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4024B4D3-B71A-4094-A5E1-8EEF0B78C158}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4024B4D3-B71A-4094-A5E1-8EEF0B78C158}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
