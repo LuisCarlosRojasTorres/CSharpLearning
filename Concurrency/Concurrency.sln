@@ -5,6 +5,10 @@ VisualStudioVersion = 17.8.34316.72
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P06_Threads", "P06_Threads\P06_Threads.csproj", "{8FC017F6-F486-4256-90C7-71E6E1388C2E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P06b_ThreadsLambdaExp", "P06b_ThreadsLambdaExp\P06b_ThreadsLambdaExp.csproj", "{86532256-9514-4E52-A0ED-72EA9A5B3874}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P07_BackgroundThreads", "P07_BackgroundThreads\P07_BackgroundThreads.csproj", "{AC41F1DC-4735-4984-920B-9BDEA01F8F5F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{8FC017F6-F486-4256-90C7-71E6E1388C2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8FC017F6-F486-4256-90C7-71E6E1388C2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8FC017F6-F486-4256-90C7-71E6E1388C2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86532256-9514-4E52-A0ED-72EA9A5B3874}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86532256-9514-4E52-A0ED-72EA9A5B3874}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86532256-9514-4E52-A0ED-72EA9A5B3874}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86532256-9514-4E52-A0ED-72EA9A5B3874}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC41F1DC-4735-4984-920B-9BDEA01F8F5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC41F1DC-4735-4984-920B-9BDEA01F8F5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC41F1DC-4735-4984-920B-9BDEA01F8F5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC41F1DC-4735-4984-920B-9BDEA01F8F5F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
