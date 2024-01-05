@@ -9,9 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P06b_ThreadsLambdaExp", "P0
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P07_BackgroundThreads", "P07_BackgroundThreads\P07_BackgroundThreads.csproj", "{AC41F1DC-4735-4984-920B-9BDEA01F8F5F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P08_ThreadPool", "P08_ThreadPool\P08_ThreadPool.csproj", "{A3006082-5592-4A3D-9702-01A787827C62}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P08_ThreadPool", "P08_ThreadPool\P08_ThreadPool.csproj", "{A3006082-5592-4A3D-9702-01A787827C62}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P09_Task", "P09_Task\P09_Task.csproj", "{E47AD1AA-A865-406E-A2C1-EF7B041BD0A2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P09_Task", "P09_Task\P09_Task.csproj", "{E47AD1AA-A865-406E-A2C1-EF7B041BD0A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P10_ContinueWith", "P10_ContinueWith\P10_ContinueWith.csproj", "{4D563FA6-E382-4F39-A6DE-2B4D02156151}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{E47AD1AA-A865-406E-A2C1-EF7B041BD0A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E47AD1AA-A865-406E-A2C1-EF7B041BD0A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E47AD1AA-A865-406E-A2C1-EF7B041BD0A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D563FA6-E382-4F39-A6DE-2B4D02156151}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D563FA6-E382-4F39-A6DE-2B4D02156151}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D563FA6-E382-4F39-A6DE-2B4D02156151}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D563FA6-E382-4F39-A6DE-2B4D02156151}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -4,9 +4,11 @@
     {
         static int GetRandomNumber()
         {
+            Console.WriteLine($" - GetRandomNumber");
             Thread.Sleep(1000);
             int randomNumber = (new Random()).Next(1, 100);
             Console.WriteLine($" - GetRandomNumber: The random number is {randomNumber}");
+            Console.WriteLine($" - GetRandomNumber... done!");
             return randomNumber;
         }
 
