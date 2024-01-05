@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P10_ContinueWith", "P10_Con
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P11_HandlingExceptions", "P11_HandlingExceptions\P11_HandlingExceptions.csproj", "{EC3B4EA6-2E19-46C7-850C-56A676AE2A7D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P12_AwaitAsync", "P12_AwaitAsync\P12_AwaitAsync.csproj", "{B4C648E2-AEAD-47FB-9064-07328097629F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{EC3B4EA6-2E19-46C7-850C-56A676AE2A7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC3B4EA6-2E19-46C7-850C-56A676AE2A7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC3B4EA6-2E19-46C7-850C-56A676AE2A7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4C648E2-AEAD-47FB-9064-07328097629F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4C648E2-AEAD-47FB-9064-07328097629F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4C648E2-AEAD-47FB-9064-07328097629F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4C648E2-AEAD-47FB-9064-07328097629F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
