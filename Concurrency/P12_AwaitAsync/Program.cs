@@ -1,6 +1,6 @@
 ﻿namespace P12_AwaitAsync
 {
-    internal class Program
+    public class Program
     {
         
         static async Task DummyMethod(string filename)
