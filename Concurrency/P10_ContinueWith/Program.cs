@@ -28,9 +28,9 @@ namespace P10_ContinueWith
         {
             var result = 0;
             
-            
+            /*
             var task = Task.Run(() => DummyMethod(10));
-
+            
             task.ContinueWith((task) =>
             {
                 Console.WriteLine(" - TaskContinuation");
@@ -38,9 +38,9 @@ namespace P10_ContinueWith
                 result = task.Result;
                 Console.WriteLine(" - TaskContinuation...done");
             });
-            
+            */
 
-   /*
+   
             var task = Task.Run(() => DummyMethod(10))
                 .ContinueWith((task) =>
                 {
@@ -49,7 +49,7 @@ namespace P10_ContinueWith
                     result = task.Result;
                     Console.WriteLine(" - TaskContinuation...done");
                 });
-    */        
+            
             while (result == 0)
             {
                 Console.WriteLine("Main Thread: Waiting for the result...");
