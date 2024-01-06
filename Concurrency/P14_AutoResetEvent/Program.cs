@@ -47,21 +47,13 @@ namespace P14_AutoResetEvent
 
                 }
             }
-
-            /*
+            
             // Thread Version  
             var t1 = new Thread(DummyMethod1);
             var t2 = new Thread(DummyMethod2);
 
             t1.Start();
-            t2.Start();
-            */
-
-            // Task Version
-            var task1 = Task.Run(DummyMethod1);
-            var task2 = Task.Run(DummyMethod2);
-
-            Console.Read();
+            t2.Start();            
         }
     }
 }
