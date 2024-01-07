@@ -27,6 +27,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P14b_AutoResetEventWithTask
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P15_ManualResetEventSlimThreads", "P15_ManualResetEventSlimThreads\P15_ManualResetEventSlimThreads.csproj", "{62E90F51-4EB1-4EFF-AA1F-91DC0049C9ED}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P15b_ManualResetEventSlimTasks", "P15b_ManualResetEventSlimTasks\P15b_ManualResetEventSlimTasks.csproj", "{F9FFFF2D-AB93-4E38-881B-C28A08C0ED00}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{62E90F51-4EB1-4EFF-AA1F-91DC0049C9ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{62E90F51-4EB1-4EFF-AA1F-91DC0049C9ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{62E90F51-4EB1-4EFF-AA1F-91DC0049C9ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9FFFF2D-AB93-4E38-881B-C28A08C0ED00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9FFFF2D-AB93-4E38-881B-C28A08C0ED00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9FFFF2D-AB93-4E38-881B-C28A08C0ED00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9FFFF2D-AB93-4E38-881B-C28A08C0ED00}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

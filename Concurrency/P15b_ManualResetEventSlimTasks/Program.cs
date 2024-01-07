@@ -1,10 +1,10 @@
-﻿namespace P14b_AutoResetEventWithTasks
+﻿namespace P15b_ManualResetEventSlimTasks
 {
-    public class Program
+    internal class Program
     {
         static void Main()
         {
-            AutoResetEvent autoResetEvent = new AutoResetEvent(false);
+            ManualResetEventSlim manualResetEventSlim = new ManualResetEventSlim(false);
 
             void DummyMethod1()
             {
@@ -20,7 +20,7 @@
                     else
                     {
                         Console.WriteLine($" - Task1: WaitOne {counter}");
-                        autoResetEvent.WaitOne();
+                        manualResetEventSlim.Wait();
                         counter = 1;
                     }
                 }
@@ -32,24 +32,31 @@
                 while (true)
                 {
                     Thread.Sleep(1000);
-                    if (counter % 10 == 0)
+                    if (counter % 11 == 0)
                     {
-                        Console.WriteLine($" - Task2: Set AutoResetEvent for Task1 every 10 seconds");
-                        autoResetEvent.Set();
-                        counter = 1;
+                        if (counter % 22 == 0)
+                        {
+                            Console.WriteLine($" - Task2: Reset ManualResetEventSlim for Thread1 every 20 seconds");
+                            manualResetEventSlim.Reset();
+                            counter = 1;
+                        }
+                        else
+                        {
+                            Console.WriteLine($" - Task2: Set ManualResetEventSlim for Thread1 every 10 seconds");
+                            manualResetEventSlim.Set();
+                            counter++;
+                        }
                     }
                     else
                     {
                         counter++;
                     }
-
                 }
             }
-            
+
             // Task Version
             var task1 = Task.Run(DummyMethod1);
             var task2 = Task.Run(DummyMethod2);
-
             Console.Read();
         }
     }
